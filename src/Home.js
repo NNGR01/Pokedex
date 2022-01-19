@@ -27,7 +27,7 @@ const Home = () => {
           })
         )
       );
-  }, []);
+  }, );
 
   useEffect(() => {
     if (poke.results != null) {
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
         {poke.map((img, i) => {
           return (
-            <div className="item1" key={img.id} key={img.id}>
+            <div className="item1" key={img.id} id={img.id}>
               <Link to={`/pokemons/${img.id}`}>
                 <button>
                   <img src={img.sprites.front_default} alt="pokemon" />
