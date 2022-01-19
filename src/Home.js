@@ -75,9 +75,7 @@ const Home = () => {
           );
         })}
 
-        <Link to="/cards">
-          <button>homi</button>
-        </Link>
+       
       </div>
   );
 };
