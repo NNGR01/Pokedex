@@ -27,7 +27,7 @@ const Home = () => {
           })
         )
       );
-  }, );
+  }, []);
 
   useEffect(() => {
     if (poke.results != null) {
