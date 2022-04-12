@@ -33,13 +33,15 @@ img {
     flex-wrap: wrap;
     align-items: center;
    
-  }
-  
+}
+
 .grid-container > div {
     text-align: center;
-    margin: 20px ;
+    margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 20px;
+    /* column-count: 3 */
+    
   }
 
