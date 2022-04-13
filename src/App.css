@@ -1,7 +1,13 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
 body{
     background-color: rgb(231, 125, 125);
 }
+
+
+
 .container{
+    
     height: 100%;
     width: 100%;
     display: block ;
@@ -14,6 +20,7 @@ body{
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+                                                
 }
 
 .search-bar {
@@ -26,6 +33,9 @@ body{
 img {
     height: 100px;
     width: 100px;
+}
+button{
+    border-radius: 50%;
 }
 
 .grid-container {

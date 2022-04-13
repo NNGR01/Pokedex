@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [pokemons, setPokemons] = React.useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
 
 
   const fetchPokemons = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=500")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=700&offset=0")
       .then((response) => response.json())
       .then((pokemons) => setPokemons(pokemons.results));
   };
@@ -25,7 +26,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="title">
-        <h1>Poké Tienda</h1>
+        <h1>Pokédex</h1>
       </div>
 
       <div className="search-bar">
@@ -48,11 +49,17 @@ const Home = () => {
           .map((pokemon, index) => {
             return (
               <div className="item1" key={index} id={index}>
+                 <Link to={`/pokemon/${pokemon.name}`}>
+              <button>
                 <img
                   src={`https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${pokemon.name}.png`}
                   alt="pokemon"
                 />
+                
+              </button>
+            </Link>
                 <h5>{pokemon.name}</h5>
+               
               </div>
             );
           })}
