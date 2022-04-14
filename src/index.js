@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './Home';
 import Pokemons from './Pokemons';
-import './App.css';
+import './css/App.css';
+
 
 
 ReactDOM.render(

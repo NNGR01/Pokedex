@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import './css/Pokemons.css';
 
 const Pokemons = (props) => {
   const [stats, setStats] = useState([]);
@@ -16,26 +17,28 @@ const Pokemons = (props) => {
   };
 
   return (
-    <div className="col-6 container my-3 text-light text-center">
-      <div className="card bg-dark py-3">
-        <h3 className="card-title">Name: {stats.name}</h3>
-        <p>order : {stats.order}</p>
-        <p>height : {stats.height}</p>
-        <p>weight : {stats.weight}</p>
-        <p>base experience: {stats.base_experience}</p>
-      <div className="pokeimg"> 
+  
+   <div className="poke-card">
 
+      <div className="poke-img"> 
         <img
           src={`https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${stats.name}.png`}
           alt="pokemon" 
         />
-    </div>
-
       </div>
+      <div className="body-card"> 
+        <h3>{stats.name}</h3>
+        <p>order : {stats.order}</p>
+        <p>height : {stats.height} lbs</p>
+        <p>weight : {stats.weight}</p>
+        <p>base experience: {stats.base_experience}</p>
+        
         <Link to="/">
           <button>Volver</button>
         </Link>
-    </div>
+        </div>
+    
+    </div> 
   );
 };
 
