@@ -36,6 +36,8 @@ img {
 }
 button{
     border-radius: 50%;
+    border-color: rgb(75, 73, 73);
+
 }
 
 .grid-container {
